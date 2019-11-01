@@ -1,4 +1,4 @@
-package toolbox
+package toolkit
 
 // 生成指定范围内的有序整型切片
 func GenerateSectionIntSliceOfOrderly(min, max int, step int) []int {

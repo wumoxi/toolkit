@@ -1,4 +1,4 @@
-package toolbox
+package toolkit
 
 import (
 	"fmt"
