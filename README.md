@@ -115,9 +115,9 @@ s := toolbox.FactorialSliceOfUint64(10)
 
 ```go
 func main() {
-	FunctionStart()
+	toolkit.FunctionStart()
 	sum(100000000)
-	duration := FunctionEnd()
+	duration := toolkit.FunctionEnd()
 	fmt.Println(duration)
 }
 
