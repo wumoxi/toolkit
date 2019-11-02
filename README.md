@@ -79,3 +79,17 @@ s := toolbox.FibSliceOfInt(100)
 [1 1 2 3 5 8 13 21 34 55 89]
 ```
 
+#### 生成指定范围内的正整数阶乘切片
+
+> Call
+
+```go
+s := toolbox.FactorialSliceOfUint64(10)
+```
+
+> Result
+
+```text
+[1 1 2 6 24 120 720 5040 40320 362880]
+```
+

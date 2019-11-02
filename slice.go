@@ -45,3 +45,21 @@ func FibSliceOfInt(max int) (slice []int) {
 		slice = append(slice, r)
 	}
 }
+
+// 计算正整数阶乘
+func Factorial(n uint64) (result uint64) {
+	if n > 0 {
+		result = n * Factorial(n-1)
+		return result
+	}
+	return 1
+}
+
+// 生成指定范围内的正整数阶乘切片
+func FactorialSliceOfUint64(max uint64) (factorial []uint64) {
+	var i uint64
+	for ; i < max; i++ {
+		factorial = append(factorial, Factorial(i))
+	}
+	return
+}
