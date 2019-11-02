@@ -109,7 +109,7 @@ s := toolbox.FactorialSliceOfUint64(10)
 
 #### 计算函数运行时间
 
-可以使用 `toolkit.FunctionStart()` 和 `duration := toolkit.FunctionEnd()` 函数进行对检测运行时间的函数进行包裹，`FunctionEnd()` 返回一个 `Duration` 值。
+可以使用 `toolkit.FunctionStart()` 和 `duration := toolkit.FunctionEnd()` 函数对待检测运行时间的函数进行包裹，`FunctionEnd()` 返回一个 `Duration` 值。
 
 > Call
 
