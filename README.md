@@ -48,7 +48,7 @@ s := toolbox.GenerateSectionIntSliceOfDisorderly(1, 20)
 
 ```text
 // It could be something like this
-[15 19 19 15 18]
+[4 18 16 7 8 4 19 1 16 9 13 9 1 4 16 15 13 8 14]
 ```
 
 #### 使用可变参数连接字符串切片
@@ -63,5 +63,19 @@ s := toolbox.JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和",
 
 ```text
 中华人民共和国
+```
+
+#### 生成指定范围内的斐波那契数列
+
+> Call
+
+```go
+s := toolbox.FibSliceOfInt(100)
+```
+
+> Result
+
+```text
+[1 1 2 3 5 8 13 21 34 55 89]
 ```
 

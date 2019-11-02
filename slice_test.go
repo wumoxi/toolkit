@@ -10,9 +10,13 @@ func TestGenerateSectionIntSliceOfOrderly(t *testing.T) {
 }
 
 func TestGenerateSectionIntSliceOfDisorderly(t *testing.T) {
-	log.Printf("Generate disorderly slice:%+v\n", GenerateSectionIntSliceOfDisorderly(15, 20))
+	log.Printf("Generate disorderly slice:%+v\n", GenerateSectionIntSliceOfDisorderly(1, 20))
 }
 
 func TestJoinItemOfStringSlice(t *testing.T) {
 	log.Printf("joined string: %s\n", JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和", "国"))
+}
+
+func TestFibSliceOfInt(t *testing.T) {
+	log.Printf("generate fib: %+v\n", FibSliceOfInt(100))
 }
