@@ -107,3 +107,34 @@ s := toolbox.FactorialSliceOfUint64(10)
 [1 1 2 6 24 120 720 5040 40320 362880]
 ```
 
+#### 计算函数运行时间
+
+可以使用 `toolkit.FunctionStart()` 和 `duration := toolkit.FunctionEnd()` 函数进行对检测运行时间的函数进行包裹，`FunctionEnd()` 返回一个 `Duration` 值。
+
+> Call
+
+```go
+func main() {
+	FunctionStart()
+	sum(100000000)
+	duration := FunctionEnd()
+	fmt.Println(duration)
+}
+
+func sum(number int64) (sum int64) {
+	var i int64
+	for i = 0; i < number; i++ {
+		sum += i
+	}
+	return sum
+}
+```
+
+> Result
+
+```text
+// 具体的运行时间根据执行环境而定
+// The specific runtime depends on the execution environment
+102.202207ms
+```
+
