@@ -79,6 +79,20 @@ s := toolbox.FibSliceOfInt(100)
 [1 1 2 3 5 8 13 21 34 55 89]
 ```
 
+#### 计算正整数阶乘
+
+> Call
+
+```go
+s := toolbox.Factorial(10)
+```
+
+> Result
+
+```text
+362880
+```
+
 #### 生成指定范围内的正整数阶乘切片
 
 > Call
