@@ -146,11 +146,11 @@ func sum(number int64) (sum int64) {
 mailer := toolkit.NewEmail(&toolkit.MailerParams{
     ServerHost:   "smtp.qq.com",
     ServerPort:   465,
-    FromEmail:    "wu.shaohua@foxmail.com",
+    FromEmail:    "shaohua@foxmail.com",
     FromPassword: "mmooqssdsuwjskssddthpubddf",
     FromName:     "武沫汐",
-    Toers:        []string{"warnerwu@126.com", "warnerwu@139.com", "contact.shaohua@gmail.com"},
-    CCers:        []string{"warnerwu@163.com"},
+    Toers:        []string{"warner@126.com", "warner@139.com", "contact.warner@gmail.com"},
+    CCers:        []string{"warner@163.com"},
 })
 
 send, err := mailer.Send("Golang邮件发送", `中华人民共和国 - Golang邮件发送`, "text/plain")
