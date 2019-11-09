@@ -143,7 +143,7 @@ func sum(number int64) (sum int64) {
 > Call
 
 ```go
-mailer := toolkit.NewEmail(&MailerParams{
+mailer := toolkit.NewEmail(&toolkit.MailerParams{
     ServerHost:   "smtp.qq.com",
     ServerPort:   465,
     FromEmail:    "wu.shaohua@foxmail.com",
