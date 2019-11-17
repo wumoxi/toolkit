@@ -10,3 +10,10 @@ func TestConvertToSmallCamelCase(t *testing.T) {
 		t.Errorf("got %s, expected %s\n", actual, ans)
 	}
 }
+
+func TestConvertToBigCamelCase(t *testing.T) {
+	var ans = "HelloWorldZhongGuo"
+	if actual := ConvertToBigCamelCase("hello world zhong guo"); actual != ans {
+		t.Errorf("got %s, expected %s\n", actual, ans)
+	}
+}
