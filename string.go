@@ -46,7 +46,6 @@ func ConvertToBigCamelCase(str string) string {
 	return strings.Join(words, "")
 }
 
-
 // Underline2SmallCamelCase 下划线转换为小驼峰
 func Underline2SmallCamelCase(str string) string {
 	s := strings.Split(strings.ToLower(str), "_")
@@ -59,6 +58,15 @@ func Underline2BigCamelCase(str string) string {
 	return ConvertToBigCamelCase(strings.Join(s, " "))
 }
 
+// SmallCamelCase2Underline 使用小驼峰转下划线生成标记
+func SmallCamelCase2Underline(str string) string {
+	return strings.Join(AllowCapitalGenerateSlice(str), Underline)
+}
+
+// SmallCamelCase2Underline 使用小驼峰转下划线生成标记
+func BigCamelCase2Underline(str string) string {
+	return strings.Join(AllowCapitalGenerateSlice(str), Underline)
+}
 
 // AllowCapitalGenerateSlice 将传递参数 str 通过单词首字母大写，进行分割返回全小写单词切片
 func AllowCapitalGenerateSlice(str string) (words []string) {
