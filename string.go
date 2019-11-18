@@ -58,13 +58,8 @@ func Underline2BigCamelCase(str string) string {
 	return ConvertToBigCamelCase(strings.Join(s, " "))
 }
 
-// SmallCamelCase2Underline 使用小驼峰转下划线生成标记
-func SmallCamelCase2Underline(str string) string {
-	return strings.Join(AllowCapitalGenerateSlice(str), Underline)
-}
-
-// SmallCamelCase2Underline 使用小驼峰转下划线生成标记
-func BigCamelCase2Underline(str string) string {
+// CamelCase2Underline 使用驼峰转下划线生成标记
+func CamelCase2Underline(str string) string {
 	return strings.Join(AllowCapitalGenerateSlice(str), Underline)
 }
 

@@ -45,16 +45,9 @@ func TestAllowCapitalGenerateSlice(t *testing.T) {
 	}
 }
 
-func TestSmallCamelCase2Underline(t *testing.T) {
+func TestCamelCase2Underline(t *testing.T) {
 	ans := "hello_world_user_info"
-	if actual := SmallCamelCase2Underline("helloWorldUserInfo"); actual != ans {
-		t.Errorf("got %s, expected %s\n", actual, ans)
-	}
-}
-
-func TestBigCamelCase2Underline(t *testing.T) {
-	ans := "hello_world_user_info"
-	if actual := BigCamelCase2Underline("HelloWorldUserInfo"); actual != ans {
+	if actual := CamelCase2Underline("HelloWorldUserInfo"); actual != ans {
 		t.Errorf("got %s, expected %s\n", actual, ans)
 	}
 }
