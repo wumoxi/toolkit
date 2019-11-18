@@ -1,4 +1,4 @@
-module toolkit
+module github.com/wumoxi/toolkit
 
 go 1.13
 
