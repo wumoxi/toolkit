@@ -1,6 +1,7 @@
 package toolkit
 
 import (
+	"strings"
 	"testing"
 )
 
@@ -29,5 +30,17 @@ func TestUnderline2BigCamelCase(t *testing.T) {
 	var ans = "HelloWorldZhongGuo"
 	if actual := Underline2BigCamelCase("hello world zhong guo"); actual != ans {
 		t.Errorf("got %s, expected %s\n", actual, ans)
+	}
+}
+
+func TestAllowCapitalGenerateSlice(t *testing.T) {
+	var ans1 = strings.Join([]string{"hello", "world", "zhong", "guo"}, "-")
+
+	if actual := AllowCapitalGenerateSlice("helloWorldZhongGuo"); strings.Join(actual, "-") != ans1 {
+		t.Errorf("got %s, expected %s\n", actual, ans1)
+	}
+
+	if actual := AllowCapitalGenerateSlice("HelloWorldZhongGuo"); strings.Join(actual, "-") != ans1 {
+		t.Errorf("got %s, expected %s\n", actual, ans1)
 	}
 }
