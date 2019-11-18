@@ -44,3 +44,16 @@ func ConvertToBigCamelCase(str string) string {
 
 	return strings.Join(words, "")
 }
+
+
+// Underline2SmallCamelCase 下划线转换为小驼峰
+func Underline2SmallCamelCase(str string) string {
+	s := strings.Split(strings.ToLower(str), "_")
+	return ConvertToSmallCamelCase(strings.Join(s, " "))
+}
+
+// Underline2BigCamelCase 下划线转换为大驼峰
+func Underline2BigCamelCase(str string) string {
+	s := strings.Split(strings.ToLower(str), "_")
+	return ConvertToBigCamelCase(strings.Join(s, " "))
+}

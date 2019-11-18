@@ -17,3 +17,17 @@ func TestConvertToBigCamelCase(t *testing.T) {
 		t.Errorf("got %s, expected %s\n", actual, ans)
 	}
 }
+
+func TestUnderline2SmallCamelCase(t *testing.T) {
+	var ans = "helloWorldZhongGuo"
+	if actual := Underline2SmallCamelCase("hello world zhong guo"); actual != ans {
+		t.Errorf("got %s, expected %s\n", actual, ans)
+	}
+}
+
+func TestUnderline2BigCamelCase(t *testing.T) {
+	var ans = "HelloWorldZhongGuo"
+	if actual := Underline2BigCamelCase("hello world zhong guo"); actual != ans {
+		t.Errorf("got %s, expected %s\n", actual, ans)
+	}
+}
