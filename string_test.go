@@ -51,3 +51,17 @@ func TestCamelCase2Underline(t *testing.T) {
 		t.Errorf("got %s, expected %s\n", actual, ans)
 	}
 }
+
+func TestSmallCamelCase2BigCamelCase(t *testing.T) {
+	ans := "HelloWorldUserInfo"
+	if actual := SmallCamelCase2BigCamelCase("helloWorldUserInfo"); actual != ans {
+		t.Errorf("got %s, expected %s\n", actual, ans)
+	}
+}
+
+func TestBigCamelCase2SmallCamelCase(t *testing.T) {
+	ans := "helloWorldUserInfo"
+	if actual := BigCamelCase2SmallCamelCase("HelloWorldUserInfo"); actual != ans {
+		t.Errorf("got %s, expected %s\n", actual, ans)
+	}
+}

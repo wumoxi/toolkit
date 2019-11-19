@@ -63,6 +63,27 @@ func CamelCase2Underline(str string) string {
 	return strings.Join(AllowCapitalGenerateSlice(str), Underline)
 }
 
+// SmallCamelCase2BigCamelCase 使用小驼峰转大驼峰
+func SmallCamelCase2BigCamelCase(str string) string {
+	words := AllowCapitalGenerateSlice(str)
+	for index, word := range words {
+		words[index] = strings.Title(word)
+	}
+	return strings.Join(words, "")
+}
+
+// BigCamelCase2SmallCamelCase 使用大驼峰转小驼峰
+func BigCamelCase2SmallCamelCase(str string) string {
+	words := AllowCapitalGenerateSlice(str)
+	for index, word := range words {
+		if index == 0 {
+			continue
+		}
+		words[index] = strings.Title(word)
+	}
+	return strings.Join(words, "")
+}
+
 // AllowCapitalGenerateSlice 将传递参数 str 通过单词首字母大写，进行分割返回全小写单词切片
 func AllowCapitalGenerateSlice(str string) (words []string) {
 	str = strings.TrimSpace(str)
