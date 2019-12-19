@@ -40,8 +40,6 @@ s := toolbox.JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和",
 
 ### 生成指定范围内的斐波那契数列
 
-> Call
-
 ```go
 // s: [1 1 2 3 5 8 13 21 34 55 89]
 s := toolbox.FibSliceOfInt(100)
