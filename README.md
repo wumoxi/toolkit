@@ -68,17 +68,17 @@ s := toolbox.FactorialSliceOfUint64(10)
 ```go
 func main() {
 	toolkit.FunctionStart()
-	sum(number int64) (sum int64) {
-    	var i int64
-    	for i = 0; i < number; i++ {
-    		sum += i
-    	}
-    	return sum
-    }
+	total := func(number int64) (sum int64) {
+		var i int64
+		for i = 0; i < number; i++ {
+			sum += i
+		}
+		return sum
+	}(100000000)
 	duration := toolkit.FunctionEnd()
 	// 具体的运行时间根据执行环境而定
 	// 102.202207ms
-	fmt.Println(duration)
+	fmt.Println("duration:", duration, ", total:", total)
 }
 ```
 
