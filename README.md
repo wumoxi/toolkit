@@ -12,7 +12,7 @@ go get github.com/wumoxi/toolkit
 
 ```go
 // r: 可能的随机值722479
-r := toolbox.Random(100000, 999999)
+r := toolkit.Random(100000, 999999)
 ```
 
 ## Slice
@@ -21,42 +21,42 @@ r := toolbox.Random(100000, 999999)
 
 ```go
 // s: [1 4 7 10 13 16 19]
-s := toolbox.GenerateSectionIntSliceOfOrderly(1, 20, 3)
+s := toolkit.GenerateSectionIntSliceOfOrderly(1, 20, 3)
 ```
 
 ### 生成指定范围内的无序整型切片
 
 ```go
 // s: 可能是这样的[4 18 16 7 8 4 19 1 16 9 13 9 1 4 16 15 13 8 14]
-s := toolbox.GenerateSectionIntSliceOfDisorderly(1, 20)
+s := toolkit.GenerateSectionIntSliceOfDisorderly(1, 20)
 ```
 
 ### 使用可变参数连接字符串切片
 
 ```go
 // s: 中华人民共和国
-s := toolbox.JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和", "国")
+s := toolkit.JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和", "国")
 ```
 
 ### 生成指定范围内的斐波那契数列
 
 ```go
 // s: [1 1 2 3 5 8 13 21 34 55 89]
-s := toolbox.FibSliceOfInt(100)
+s := toolkit.FibSliceOfInt(100)
 ```
 
 ### 计算正整数阶乘
 
 ```go
 // i: 362880
-i := toolbox.Factorial(10)
+i := toolkit.Factorial(10)
 ```
 
 ### 生成指定范围内的正整数阶乘切片
 
 ```go
 // s: [1 1 2 6 24 120 720 5040 40320 362880]
-s := toolbox.FactorialSliceOfUint64(10)
+s := toolkit.FactorialSliceOfUint64(10)
 ```
 
 ## 时间
@@ -128,13 +128,13 @@ type student struct {
 }
 
 // actual: ["Address", "Age", "Email", "Name", "Phone", "Sex"] 
-actual, err := GetFieldNameByTagValue(student{}, "change")
+actual, err := toolkit.GetFieldNameByTagValue(student{}, "change")
 if err != nil {
     t.Errorf("get field name slice by tag value error: %s\n", err)
 }
 
 // actual: ["Address", "Age"] 
-actual, err = GetFieldNameByTagValue(student{}, "modify")
+actual, err = toolkit.GetFieldNameByTagValue(student{}, "modify")
 if err != nil {
     t.Errorf("get field name slice by tag value error: %s\n", err)
 }
