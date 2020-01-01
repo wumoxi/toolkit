@@ -41,8 +41,8 @@ s := toolkit.JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和",
 ### 生成指定范围内的斐波那契数列
 
 ```go
-// s: [1 1 2 3 5 8 13 21 34 55 89]
-s := toolkit.FibSliceOfInt(100)
+// s: [1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765]
+s := toolkit.GenerateSectionFibSlice(20)
 ```
 
 ### 计算正整数阶乘

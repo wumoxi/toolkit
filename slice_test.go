@@ -16,8 +16,8 @@ func TestJoinItemOfStringSlice(t *testing.T) {
 	t.Logf("joined string: %s\n", JoinItemOfStringSlice("", "中", "华", "人", "民", "共", "和", "国"))
 }
 
-func TestFibSliceOfInt(t *testing.T) {
-	t.Logf("generate fib: %+v\n", FibSliceOfInt(100))
+func TestGenerateSectionFibSlice(t *testing.T) {
+	t.Logf("generate fib: %+v\n", GenerateSectionFibSlice(20))
 }
 
 func TestFactorial(t *testing.T) {

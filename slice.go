@@ -1,6 +1,8 @@
 package toolkit
 
-import "strings"
+import (
+	"strings"
+)
 
 // 生成指定范围内的有序整型切片
 func GenerateSectionIntSliceOfOrderly(min, max int, step int) []int {
@@ -26,24 +28,17 @@ func JoinItemOfStringSlice(delimit string, slice ...string) (joined string) {
 	return strings.Join(slice, delimit)
 }
 
-// 生成斐波那契数
-func Fib(n int) (res int) {
-	if n <= 1 {
-		return 1
-	} else {
-		return Fib(n-1) + Fib(n-2)
-	}
-}
-
 // 生成指定范围内的斐波那契数列
-func FibSliceOfInt(max int) (slice []int) {
-	for i := 0; ; i++ {
-		var r int
-		if r = Fib(i); r >= max {
-			return slice
+func GenerateSectionFibSlice(max int) (fibs []int) {
+	fibs = make([]int, max)
+	for i := 0; i < max; i++ {
+		if i == 0 || i == 1 {
+			fibs[i] = 1
+		} else {
+			fibs[i] = fibs[i-1] + fibs[i-2]
 		}
-		slice = append(slice, r)
 	}
+	return fibs
 }
 
 // 计算正整数阶乘
