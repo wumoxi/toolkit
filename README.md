@@ -88,7 +88,7 @@ func main() {
 
 ```go
 // funcName = "fmt.Printf"
-funcName, err := toolkit.GetFieldsNameByTag(fmt.Printf)
+funcName, err := toolkit.GetFuncName(fmt.Printf)
 if err != nil {
 	panic(err)
 }
