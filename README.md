@@ -82,9 +82,9 @@ func main() {
 }
 ```
 
-## 结构体
+## 反射
 
-### 获取结构字段名和标记映射
+### 获取结构体字段名和标签映射
 
 ```go
 // student struct type
@@ -112,6 +112,52 @@ if err != nil {
 	panic(err)
 }
 ```
+
+### 获取运行时函数名称
+
+```go
+// funcName = "fmt.Printf"
+funcName, err := toolkit.GetFieldsNameByTag(fmt.Printf)
+if err != nil {
+	panic(err)
+}
+```
+
+## 结构体
+
+### 通过标签值获取字段名列表
+
+```go
+// student struct type
+type student struct {
+	Id      int    `json:"id" canChangeMethod:"-"`
+	Name    string `json:"name" canChangeMethod:"change"`
+	Email   string `json:"email" canChangeMethod:"change"`
+	Phone   string `json:"phone" canChangeMethod:"change"`
+	Sex     string `json:"sex" canChangeMethod:"change"`
+	Age     int    `json:"age" canChangeMethod:"change,modify"`
+	Address string `json:"address" canChangeMethod:"change,modify"`
+}
+
+// actual := [Address Age Email Name Phone Sex]
+actual, err := toolkit.GetFieldsNameByTag(student{}, "change")
+if err != nil {
+	panic(err)
+}
+
+// actual = [Address Age]
+actual, err = toolkit.GetFieldsNameByTag(student{}, "modify")
+if err != nil {
+	panic(err)
+}
+
+// actual = [Phone]
+actual, err = toolkit.GetFieldsNameByTag(student{}, "phone")
+if err != nil {
+	panic(err)
+}
+```
+
 
 ### 根据标签值获取字段名数组
 

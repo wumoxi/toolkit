@@ -2,7 +2,6 @@ package toolkit
 
 import (
 	"encoding/json"
-	"log"
 	"sort"
 	"testing"
 )
@@ -47,13 +46,12 @@ func TestGetAllStructTag(t *testing.T) {
 	}
 }
 
-func TestGetFieldNameByTagValue(t *testing.T) {
+func TestGetFieldsNameByTag(t *testing.T) {
 	expectedC := []string{"Name", "Email", "Phone", "Sex", "Age", "Address"}
 	sort.Slice(expectedC, func(i, j int) bool {
 		return expectedC[i] < expectedC[j]
 	})
-	log.Printf("expectedC: %+v\n", expectedC)
-	actualC, err := GetFieldNameByTagValue(student{}, "change")
+	actualC, err := GetFieldsNameByTag(student{}, "change")
 	if err != nil {
 		t.Errorf("get field name slice by tag value error: %s\n", err)
 	}
@@ -67,8 +65,7 @@ func TestGetFieldNameByTagValue(t *testing.T) {
 	sort.Slice(expectedM, func(i, j int) bool {
 		return expectedM[i] < expectedM[j]
 	})
-	log.Printf("expectedM: %+v\n", expectedM)
-	actualM, err := GetFieldNameByTagValue(student{}, "change")
+	actualM, err := GetFieldsNameByTag(student{}, "modify")
 	if err != nil {
 		t.Errorf("get field name slice by tag value error: %s\n", err)
 	}
