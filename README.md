@@ -158,34 +158,6 @@ if err != nil {
 }
 ```
 
-
-### 根据标签值获取字段名数组
-
-```go
-// student struct type
-type student struct {
-	Id      int    `json:"id" canChangeMethod:"-"`
-	Name    string `json:"name" canChangeMethod:"change"`
-	Email   string `json:"email" canChangeMethod:"change"`
-	Phone   string `json:"phone" canChangeMethod:"change"`
-	Sex     string `json:"sex" canChangeMethod:"change"`
-	Age     int    `json:"age" canChangeMethod:"change,modify"`
-	Address string `json:"address" canChangeMethod:"change,modify"`
-}
-
-// actual: ["Address", "Age", "Email", "Name", "Phone", "Sex"] 
-actual, err := toolkit.GetFieldNameByTagValue(student{}, "change")
-if err != nil {
-    t.Errorf("get field name slice by tag value error: %s\n", err)
-}
-
-// actual: ["Address", "Age"] 
-actual, err = toolkit.GetFieldNameByTagValue(student{}, "modify")
-if err != nil {
-    t.Errorf("get field name slice by tag value error: %s\n", err)
-}
-```
-
 ## 发送邮件
 
 ```go
