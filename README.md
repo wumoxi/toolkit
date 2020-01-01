@@ -84,6 +84,16 @@ func main() {
 
 ## 反射
 
+### 获取运行时函数名称
+
+```go
+// funcName = "fmt.Printf"
+funcName, err := toolkit.GetFieldsNameByTag(fmt.Printf)
+if err != nil {
+	panic(err)
+}
+```
+
 ### 获取结构体字段名和标签映射
 
 ```go
@@ -108,16 +118,6 @@ type student struct {
 //     "Address": {{"json": "address"}, {"canChangeMethod": "change,modify"}},
 // }
 actual, err := toolkit.GetAllStructTags(student{})
-if err != nil {
-	panic(err)
-}
-```
-
-### 获取运行时函数名称
-
-```go
-// funcName = "fmt.Printf"
-funcName, err := toolkit.GetFieldsNameByTag(fmt.Printf)
 if err != nil {
 	panic(err)
 }
