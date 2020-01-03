@@ -82,6 +82,15 @@ func main() {
 }
 ```
 
+## runtime
+
+### 获取当前程序占用内存大小
+
+```go
+// such as: info = 128.00KB
+info := toolkit.MemAllocated()
+```
+
 ## 反射
 
 ### 获取运行时函数名称
