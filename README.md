@@ -313,7 +313,7 @@ r := toolkit.IsInt(v)
 
 ### 是否是uintptr类型值
 
-只有当值为int64类型值时，其结果值为 `true`，否则为 `false`
+只有当值为uintptr类型值时，其结果值为 `true`，否则为 `false`
 
 ```go
 var v uintptr = 7788556699
