@@ -167,6 +167,161 @@ if err != nil {
 }
 ```
 
+## 类型判断
+
+### 是否是布尔值
+
+只有当值为布尔类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+// r the value is true
+r := toolkit.IsBool(false)
+
+// r the value is true
+r := toolkit.IsBool(true)
+```
+
+### 是否是float32类型值
+
+只有当值为float32类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+// r the value is true
+r := toolkit.IsFloat32(3.1415926)
+```
+
+### 是否是float64类型值
+
+只有当值为float64类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+// r the value is true
+r := toolkit.IsFloat64(3.1415926)
+```
+
+### 是否是uint8类型值
+
+只有当值为uint8类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v uint8 = 100
+
+// r the value is true
+r := toolkit.IsUint8(v)
+```
+
+### 是否是uint16类型值
+
+只有当值为uint16类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v uint16 = 100
+
+// r the value is true
+r := toolkit.IsUint16(v)
+```
+
+
+### 是否是uint32类型值
+
+只有当值为uint32类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v uint32 = 100
+
+// r the value is true
+r := toolkit.IsUint32(v)
+```
+
+### 是否是uint64类型值
+
+只有当值为uint64类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v uint64 = 100
+
+// r the value is true
+r := toolkit.IsUint64(v)
+```
+
+### 是否是uint类型值
+
+只有当值为uint类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v uint = 100
+
+// r the value is true
+r := toolkit.IsUint(v)
+```
+
+### 是否是int8类型值
+
+只有当值为int8类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v int8 = 100
+
+// r the value is true
+r := toolkit.IsInt8(v)
+```
+
+### 是否是int16类型值
+
+只有当值为int16类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v int16 = 100
+
+// r the value is true
+r := toolkit.IsInt16(v)
+```
+
+### 是否是int32类型值
+
+只有当值为int32类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v int32 = 100
+
+// r the value is true
+r := toolkit.IsInt32(v)
+```
+
+### 是否是int64类型值
+
+只有当值为int64类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v int64 = 100
+
+// r the value is true
+r := toolkit.IsInt64(v)
+```
+
+
+### 是否是int类型值
+
+只有当值为int类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v int = 100
+
+// r the value is true
+r := toolkit.IsInt(v)
+```
+
+### 是否是uintptr类型值
+
+只有当值为int64类型值时，其结果值为 `true`，否则为 `false`
+
+```go
+var v uintptr = 7788556699
+
+// r the value is true
+r := toolkit.IsUintptr(v)
+```
+
 ## 发送邮件
 
 ```go
